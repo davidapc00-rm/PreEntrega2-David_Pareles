@@ -1,0 +1,133 @@
+/* =========================
+   PreEntrega1 - David Pareles
+   CSS inicial
+   ========================= */
+
+/* 1) Variables (paleta) */
+:root{
+  --color-fondo: #ffffff;
+  --color-texto: #1b1f24;
+  --color-primario: #0e4a5b;        /* azul petróleo */
+  --color-secundario: #2fb7c6;      /* turquesa */
+  --color-acento: #ff6b4a;          /* naranja fuerte */
+  --color-acento-suave: #ffe3db;    /* naranja pastel */
+  --color-suave: #eef6f7;           /* fondo suave */
+  --color-muted: #5e6a75;           /* texto secundario */
+}
+
+/* 2) Base / reset mínimo */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--color-texto);
+  background: var(--color-fondo);
+}
+
+/* 3) Tipografía */
+h1, h2, h3{
+  color: var(--color-primario);
+  letter-spacing: .2px;
+}
+h1{ font-size: 2rem; }
+h2{ font-size: 1.5rem; }
+h3{ font-size: 1.2rem; }
+
+p{ font-size: 1rem; color: var(--color-texto); }
+
+/* 4) Enlaces */
+a{
+  color: var(--color-secundario);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
+  transition: color .2s ease, text-underline-offset .2s ease;
+}
+a:hover{
+  color: var(--color-acento);
+  text-underline-offset: 3px;
+}
+
+/* 5) Listas */
+ul li { list-style: disc; }
+ol li { list-style: decimal; }
+
+/* 6) Medios (figura/imagen) */
+figure{ background: var(--color-suave); }
+figcaption{ color: var(--color-muted); font-size: .9rem; }
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform .2s ease, filter .2s ease;
+}
+img:hover{
+  transform: scale(1.01);
+  filter: saturate(1.05);
+}
+
+/* 7) Bloques y componentes */
+.logo{
+  color: var(--color-acento); 
+  font-weight: 800;
+  font-variant: small-caps;
+  letter-spacing: .5px;
+}
+
+/* Hero (solo color, sin box-model) */
+.hero{
+  background: linear-gradient(180deg, #fff 0%, var(--color-suave) 100%);
+  color: var(--color-primario);
+}
+
+/* Títulos específicos en receta */
+#ingredientes-titulo{ color: var(--color-primario); }
+
+/* Botón-estilo (enlaces destacados) */
+.btn{
+  color: var(--color-acento);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  text-decoration-thickness: 3px;
+}
+
+/* 8) Tamaños de imágenes (control visual) */
+figure img{ width: 280px; height: auto; }
+.receta-img{ width: 250px; height: auto; }           /* index/recetas */
+.receta-hero{ width: 640px; max-width: 100%; height: auto; }               /* detalle */
+.tecnica-img{ width: 320px; height: auto; }
+.sobre-img{ width: 320px; height: auto; }
+
+/* 9) Detalles visuales */
+h1::after{
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-secundario), transparent);
+}
+::selection{ background: var(--color-secundario); color:#fff; }
+
+/* 10) Chrome del sitio: Header y Footer */
+header, footer{
+  background: var(--color-acento-suave);   /* pastel */
+  color: var(--color-primario);
+}
+header nav a,
+footer nav a{
+  color: var(--color-primario);
+  text-decoration: none;
+  font-weight: 500;
+}
+header nav a:hover,
+footer nav a:hover{ color: var(--color-acento); }
+
+/* Logo dentro del header */
+header .logo{
+  color: var(--color-primario); 
+  font-weight: 800;
+  text-shadow: 0 1px 0 rgba(0,0,0,.08);
+}
