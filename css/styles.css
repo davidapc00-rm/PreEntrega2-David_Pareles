@@ -1,5 +1,5 @@
 /* =========================
-   PreEntrega1 - David Pareles
+   PreEntrega2 - David Pareles
    CSS inicial
    ========================= */
 
@@ -55,7 +55,8 @@ ul li { list-style: disc; }
 ol li { list-style: decimal; }
 
 /* 6) Medios (figura/imagen) */
-figure{ background: var(--color-suave); }
+figure{ background: transparent; }          /* antes: var(--color-suave) */
+.figure-soft{ background: var(--color-suave);} /* utilitario opcional */
 figcaption{ color: var(--color-muted); font-size: .9rem; }
 
 img{
@@ -95,12 +96,21 @@ img:hover{
   text-decoration-thickness: 3px;
 }
 
-/* 8) Tamaños de imágenes (control visual) */
-figure img{ width: 280px; height: auto; }
-.receta-img{ width: 250px; height: auto; }           /* index/recetas */
-.receta-hero{ width: 640px; max-width: 100%; height: auto; }               /* detalle */
-.tecnica-img{ width: 320px; height: auto; }
-.sobre-img{ width: 320px; height: auto; }
+/* 8) Imágenes (control visual) */
+/* QUITAMOS anchos fijos para evitar huecos en columnas anchas */
+.receta-hero,
+.tecnica-img,
+.sobre-img,
+.receta-img {              /* por si aún la usas en alguna lista */
+  width: 100%;
+  height: auto;
+}
+
+/* Miniaturas de cards (Bootstrap): alto uniforme */
+.card-img-top { 
+  height: 200px;
+  object-fit: cover;       /* usa contain si no quieres recortes */
+}
 
 /* 9) Detalles visuales */
 h1::after{
@@ -130,4 +140,14 @@ header .logo{
   color: var(--color-primario); 
   font-weight: 800;
   text-shadow: 0 1px 0 rgba(0,0,0,.08);
+}
+
+/* 11) Responsive & ajustes */
+@media (max-width: 576px) {
+  h1 { font-size: 1.5rem; }
+  .hero .lead { font-size: 1rem; }
+}
+
+@media (min-width: 768px) {
+  .card-img-top { height: 240px; }
 }
