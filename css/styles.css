@@ -1,5 +1,5 @@
 /* =========================
-   PreEntrega1 - David Pareles
+   PreEntrega2 - David Pareles
    CSS inicial
    ========================= */
 
@@ -130,4 +130,23 @@ header .logo{
   color: var(--color-primario); 
   font-weight: 800;
   text-shadow: 0 1px 0 rgba(0,0,0,.08);
+}
+
+/* 11) Responsive & Bootstrap overrides */
+
+/* Uniformar alto visual de las miniaturas en cards (Bootstrap) */
+.card-img-top { 
+  height: 200px; 
+  object-fit: cover; 
+}
+
+/* Ajustes suaves en móviles */
+@media (max-width: 576px) {
+  h1 { font-size: 1.5rem; }
+  .hero .lead { font-size: 1rem; }
+}
+
+/* (Opcional) un poco más de altura en pantallas medianas en adelante */
+@media (min-width: 768px) {
+  .card-img-top { height: 240px; }
 }
