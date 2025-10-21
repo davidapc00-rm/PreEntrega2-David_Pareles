@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoctelesMix — Inicio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoctelesMix — Inicio</title>
+
+  <!-- Bootstrap CSS -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous"
-  />  
+  />
+
+  <!-- Hoja de estilos -->
   <link rel="stylesheet" href="css/styles.css" />
-  <!---- Hoja de estilos linkeada ---->
 </head>
 <body>
-    <!---- Header: navegación principal del sitio ---->
+  <!-- Header -->
   <header class="bg-primary">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
         <a class="navbar-brand fw-bold" href="index.html">CoctelesMix</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Mostrar navegación"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div id="mainNav" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto gap-2">
-            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" aria-current="page">Inicio</a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="recetas.html">Recetas</a></li>
             <li class="nav-item"><a class="nav-link" href="tecnicas.html">Técnicas</a></li>
-            <li class="nav-item"><a class="nav-link" href="sobre-contacto.html">Sobre &amp; Contacto</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre-contacto.html">Sobre &amp; Contacto</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -37,71 +52,88 @@
 
   <!-- Contenido principal -->
   <main>
-    <!-- Sección: Hero -->
+    <!-- Hero -->
     <section class="hero py-5" aria-labelledby="hero-title">
       <div class="container">
-        <h1 id="hero-title" class="display-6 mb-2">Cócteles & Mixología</h1>
-        <p class="lead mb-3">Aprende recetas clásicas y técnicas básicas para preparar tragos en casa.</p>
+        <h1 id="hero-title" class="display-6 mb-2">Cócteles &amp; Mixología</h1>
+        <p class="lead mb-3">
+          Aprende recetas clásicas y técnicas básicas para preparar tragos en casa.
+        </p>
         <a href="recetas.html" class="btn btn-accent">Ver todas las recetas</a>
       </div>
     </section>
-    
-    <!-- Sección: Categorías -->
+
+    <!-- Categorías -->
     <section class="py-4" aria-labelledby="cat-title">
       <div class="container">
         <h2 id="cat-title" class="h4 mb-3">Categorías</h2>
         <ul class="mb-0">
-          <li><a href="recetas.html">Clásicos</a></li>
+          <li><a href="recetas.html#clasicos">Clásicos</a></li>
           <li><a href="recetas.html">Tropicales</a></li>
           <li><a href="recetas.html">Sin alcohol</a></li>
         </ul>
       </div>
     </section>
 
-    <!-- Sección: Destacadas -->
+    <!-- Destacadas -->
     <section class="py-4" aria-labelledby="destacadas-title" id="destacadas">
       <div class="container">
         <h2 id="destacadas-title" class="h3 mb-3">Recetas destacadas</h2>
 
         <div class="row g-4">
+          <!-- Margarita -->
           <article class="col-12 col-md-4">
             <div class="card h-100">
-              <img class="card-img-top"
-                  src="assets/margarita.jpg"
-                  alt="Copa Margarita con sal en el borde"
-                  width="1591" height="2048" loading="lazy"/>
+              <img
+                class="card-img-top"
+                src="assets/margarita.jpg"
+                alt="Copa de Margarita con sal en el borde; coctel clásico de tequila, triple sec y jugo de lima"
+                width="1591"
+                height="2048"
+                loading="lazy"
+              />
               <div class="card-body">
                 <h3 class="h5 card-title">Margarita</h3>
                 <p class="card-text">Tequila, triple sec y lima.</p>
-                <a class="btn btn-sm btn-accent" href="margarita.html">Ver receta</a>
+                <a class="btn btn-sm btn-accent stretched-link" href="margarita.html">Ver receta</a>
               </div>
             </div>
           </article>
 
+          <!-- Negroni -->
           <article class="col-12 col-md-4">
             <div class="card h-100">
-              <img class="card-img-top"
-                  src="assets/negroni.jpg"
-                  alt="Vaso bajo con Negroni y rodaja de naranja"
-                  width="1168" height="2048" loading="lazy"/>
+              <img
+                class="card-img-top"
+                src="assets/negroni.jpg"
+                alt="Vaso bajo con Negroni, rodaja de naranja y hielo; mezcla de gin, vermut rojo y Campari"
+                width="1168"
+                height="2048"
+                loading="lazy"
+              />
               <div class="card-body">
                 <h3 class="h5 card-title">Negroni</h3>
                 <p class="card-text">Amargo y aromático.</p>
-                <a class="btn btn-sm btn-outline-primary" href="#">Ver receta</a>
+                <a class="btn btn-sm btn-outline-primary stretched-link" href="recetas.html#negroni">Ver receta</a>
               </div>
             </div>
           </article>
 
+          <!-- Mojito -->
           <article class="col-12 col-md-4">
             <div class="card h-100">
-              <img class="card-img-top"
-                  src="assets/mojito.jpg"
-                  alt="Mojito con menta y rodajas de lima"
-                  width="1638" height="2048" loading="lazy"/>
+              <img
+                class="card-img-top"
+                src="assets/mojito.jpg"
+                alt="Vaso alto con Mojito, hojas de menta y rodajas de lima sobre mesa con sal"
+                width="1638"
+                height="2048"
+                loading="lazy"
+              />
               <div class="card-body">
                 <h3 class="h5 card-title">Mojito</h3>
                 <p class="card-text">Refrescante y herbal.</p>
-                <a class="btn btn-sm btn-outline-primary" href="#">Ver receta</a>
+                <a class="btn btn-sm btn-outline-primary stretched-link" href="recetas.html#mojito">Ver receta</a>
               </div>
             </div>
           </article>
@@ -110,13 +142,15 @@
     </section>
   </main>
 
-  <!-- Pie de página -->
+  <!-- Footer -->
   <footer class="bg-primary text-white mt-5">
     <div class="container py-4">
       <p class="mb-1">&copy; 2025 CoctelesMix</p>
       <nav aria-label="Enlaces secundarios">
         <a class="link-light me-3" href="#">Términos</a>
-        <a class="link-light" href="#">Privacidad</a>
+        <a class="link-light me-3" href="#">Privacidad</a>
+        <a class="link-light me-3" href="mailto:contacto@coctelesmix.com">Contacto</a>
+        <a class="link-light" href="https://www.instagram.com/cocteles_mix" target="_blank" rel="noopener">Instagram</a>
       </nav>
     </div>
   </footer>
@@ -125,7 +159,7 @@
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous">
-  </script>
+    crossorigin="anonymous"
+  ></script>
 </body>
 </html>
