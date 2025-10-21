@@ -1,0 +1,11 @@
+{
+  "name": "entrega2-david_pareles",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass --watch scss:css",
+    "build:css": "sass --no-source-map --style=compressed scss:css"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}
