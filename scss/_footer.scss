@@ -1,0 +1,7 @@
+@use 'globals' as *;
+
+/* Ya hereda .bg-primary del header.scss.
+   Deja un pequeño espaciado visual adicional si quieres */
+footer {
+  a { @include focus-ring($color-accent); }
+}

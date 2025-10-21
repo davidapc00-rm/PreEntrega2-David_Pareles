@@ -1,0 +1,11 @@
+@use 'globals' as *;
+
+/* Ejemplo simple de keyframes para hero */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-anim {
+  animation: fadeUp .6s ease both;
+}

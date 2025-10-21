@@ -1,0 +1,6 @@
+@use 'globals' as *;
+
+/* Home */
+#destacadas {
+  .card { border: 0; box-shadow: $shadow-sm; }
+}

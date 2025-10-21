@@ -1,0 +1,38 @@
+@use 'variables' as v;
+
+/* Botón base: con radio opcional */
+@mixin btn-style($bg, $fg: #fff, $radius: v.$radius-sm) {
+  background-color: $bg;
+  color: $fg;
+  border: 0;
+  border-radius: $radius;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .6px;
+  transition: background-color .2s ease, color .2s ease, box-shadow .2s ease;
+
+  &:hover,
+  &:focus {
+    /* oscurece levemente el fondo en hover/focus */
+    background-color: scale-color($bg, $lightness: -10%);
+    color: $fg;
+    box-shadow: v.$shadow-soft;
+  }
+
+  &:focus-visible {
+    outline: 2px solid v.$color-acento;
+    outline-offset: 2px;
+  }
+}
+
+/* Miniaturas de cards con recorte */
+@mixin thumb($height: 200px) {
+  height: $height;
+  object-fit: cover;
+}
+
+/* Contenedor con padding vertical */
+@mixin section-y($py: 1rem) {
+  padding-top: $py;
+  padding-bottom: $py;
+}
