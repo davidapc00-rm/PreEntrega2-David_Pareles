@@ -1,84 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoctelesMix — Recetas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoctelesMix — Sobre & Contacto</title>
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous"
-  />  
+  />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <!-- Header -->
+  <header class="bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">CoctelesMix</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!----- Header ----->
-  <header>
-    <div class="logo">CoctelesMix</div>
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="index.html" aria-current="page">Inicio</a></li>
-        <li><a href="recetas.html">Recetas</a></li>
-        <li><a href="tecnicas.html">Técnicas</a></li>
-        <li><a href="sobre-contacto.html">Sobre & Contacto</a></li>
-      </ul>
+        <div id="mainNav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto gap-2">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="recetas.html">Recetas</a></li>
+            <li class="nav-item"><a class="nav-link" href="tecnicas.html">Técnicas</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre-contacto.html" aria-current="page">Sobre &amp; Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
   <!-- Contenido principal -->
-  <main>
-    <!-- Sección: Sobre mí / Sobre el sitio -->
-    <section aria-labelledby="sobre-title">
-      <!-- Comentario: Presentación breve del proyecto/sitio -->
-      <h1 id="sobre-title">Sobre CoctelesMix</h1>
-      <figure class="figure-soft p-3">
-        <img
-          src="assets/herramientas.jpg"
-          alt="Herramientas de coctelería sobre mesa"
-          width="1536" height="1536" loading="lazy"
-          class="img-fluid rounded sobre-img">
-        <figcaption>Herramientas esenciales.</figcaption>
-      </figure>
+  <main class="py-4">
+    <div class="container">
+      <h1 class="h2 mb-3">Sobre & Contacto</h1>
 
-      <p>
-        CocteleriaMix es un proyecto educativo orientado a entusiastas que quieren preparar cócteles en casa.
-      </p>
-      <p>
-        Encontrarás recetas clásicas, técnicas esenciales y consejos para mejorar cada preparación.
-      </p>
-    </section>
+      <div class="row g-4">
+        <section class="col-12 col-md-6">
+          <h2 class="h4">Sobre</h2>
+          <p>Proyecto sobre coctelería y técnicas básicas…</p>
+          <figure>
+            <img
+              src="assets/herramientas.jpg"
+              alt="Set de herramientas de coctelería: colador, coctelera, jiggers y cucharillas"
+              width="1536" height="1536" loading="lazy"
+              class="img-fluid rounded sobre-img"
+            />
+            <figcaption>Herramientas esenciales.</figcaption>
+          </figure>
+        </section>
 
-    <!-- Sección: Contacto -->
-    <section aria-labelledby="contacto-title">
-      <!-- Comentario: Información de contacto en lista -->
-      <h2 id="contacto-title">Contacto</h2>
-      <p>¿Tienes sugerencias o dudas? Escríbenos:</p>
-      <ul>
-        <li>Email: <a href="mailto:coctelesmix@gmail.com">coctelesmix@gmail.com</a></li>
-        <li>Instagram: <a href="#" rel="noopener">@coctelesmix</a></li>
-        <li>Ciudad: Santiago, Chile</li>
-      </ul>
-    </section>
+        <section class="col-12 col-md-6">
+          <h2 class="h4">Contacto</h2>
+          <ul class="mb-0">
+            <li>Email: coctelesmix@gmail.com</li>
+          </ul>
+        </section>
+      </div>
+    </div>
   </main>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 CoctelesMix</p>
-    <nav aria-label="Enlaces secundarios">
-      <ul>
-        <li><a href="#">Términos</a></li>
-        <li><a href="#">Privacidad</a></li>
-      </ul>
-    </nav>
+  <footer class="bg-primary text-white mt-5">
+    <div class="container py-4">
+      <p class="mb-1">&copy; 2025 CoctelesMix</p>
+      <nav aria-label="Enlaces secundarios">
+        <a class="link-light me-3" href="#">Términos</a>
+        <a class="link-light me-3" href="#">Privacidad</a>
+        <a class="link-light me-3" href="mailto:contacto@coctelesmix.com">Contacto</a>
+        <a class="link-light" href="https://www.instagram.com/cocteles_mix" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
   </footer>
 
-  <!-- Bootstrap JS -->
+    <!-- Bootstrap JS -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous">
-  </script> 
+    crossorigin="anonymous"
+  ></script>
 </body>
 </html>

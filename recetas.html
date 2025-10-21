@@ -1,72 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoctelesMix — Recetas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoctelesMix — Recetas</title>
+
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous"
-  />  
+  />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <!-- Header -->
+  <header class="bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">CoctelesMix</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!----- Header ----->
-  <header>
-    <div class="logo">CoctelesMix</div>
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="index.html" aria-current="page">Inicio</a></li>
-        <li><a href="recetas.html">Recetas</a></li>
-        <li><a href="tecnicas.html">Técnicas</a></li>
-        <li><a href="sobre-contacto.html">Sobre & Contacto</a></li>
-      </ul>
+        <div id="mainNav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto gap-2">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="recetas.html" aria-current="page">Recetas</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="tecnicas.html">Técnicas</a></li>
+            <li class="nav-item"><a class="nav-link" href="sobre-contacto.html">Sobre &amp; Contacto</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <main>
-  <!----- Sección: listado de recetas ----->
-    <section aria-labelledby="recetas-title">
-      <h1 id="recetas-title">Recetas</h1>
+  <main class="py-4">
+    <div class="container">
+      <h1 class="h2 mb-3">Recetas</h1>
+      <h2 id="clasicos" class="h4 my-4">Clásicos</h2>
 
-      <!---- Card simple (acá se repetirá varias veces) ---->
-      <article>
-        <header><h2>Margarita</h2></header>
-        <figure>
-          <img class="receta-img" src="assets/margarita.jpg" alt="Copa de Margarita con sal" width="1591" height="2048" loading="lazy">
-          <figcaption>Refrescante cítrico</figcaption>
-        </figure>
-        <p><a href="margarita.html">Ver receta</a></p>
-      </article>
+      <div class="row g-4">
+        <!-- Margarita -->
+        <article id="margarita" class="col-12 col-md-4">
+          <div class="card h-100">
+            <img class="card-img-top"
+                src="assets/margarita.jpg"
+                alt="Copa de Margarita con sal en el borde"
+                width="1591" height="2048" loading="lazy"/>
+            <div class="card-body">
+              <h2 class="h5 card-title">Margarita</h2>
+              <p class="card-text">Cítrica y fresca.</p>
+              <a class="btn btn-sm btn-outline-primary" href="margarita.html">Ver receta</a>
+            </div>
+          </div>
+        </article>
 
-      <article>
-        <header><h2>Mojito</h2></header>
-        <figure>
-            <img class= "receta-img" src="assets/mojito.jpg" alt="Vaso alto de Mojito con garnish" width="1638" height="2048" loading="lazy">
-            <figcaption>Refrecante cítrico</figcaption>
-        </figure>
-        <p><a href="#">Ver receta</a></p>
-      </article>
+        <!-- Negroni -->
+        <article id="negroni" class="col-12 col-md-4">
+          <div class="card h-100">
+            <img class="card-img-top"
+                src="assets/negroni.jpg"
+                alt="Vaso bajo con Negroni y rodaja de naranja"
+                width="1168" height="2048" loading="lazy"/>
+            <div class="card-body">
+              <h2 class="h5 card-title">Negroni</h2>
+              <p class="card-text">Amargo y aromático.</p>
+              <a class="btn btn-sm btn-outline-primary" href="#">Ver receta</a>
+            </div>
+          </div>
+        </article>
 
-      <!----- Más artículos... ----->
-    </section>
+        <!-- Mojito -->
+        <article id="mojito" class="col-12 col-md-4">
+          <div class="card h-100">
+            <img class="card-img-top"
+                src="assets/mojito.jpg"
+                alt="Mojito con menta y rodajas de lima"
+                width="1638" height="2048" loading="lazy"/>
+            <div class="card-body">
+              <h2 class="h5 card-title">Mojito</h2>
+              <p class="card-text">Refrescante y herbal.</p>
+              <a class="btn btn-sm btn-outline-primary" href="#">Ver receta</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
   </main>
-
-  <!----- Footer ----->
-  <footer>
-    <p>&copy; 2025 CoctelesMix</p>
-    <nav aria-label="Enlaces secundarios">
-      <ul>
-        <li><a href="#">Términos</a></li>
-        <li><a href="#">Privacidad</a></li>
-      </ul>
-    </nav>
+  
+  <!-- Footer -->
+  <footer class="bg-primary text-white mt-5">
+    <div class="container py-4">
+      <p class="mb-1">&copy; 2025 CoctelesMix</p>
+      <nav aria-label="Enlaces secundarios">
+        <a class="link-light me-3" href="#">Términos</a>
+        <a class="link-light me-3" href="#">Privacidad</a>
+        <a class="link-light me-3" href="mailto:contacto@coctelesmix.com">Contacto</a>
+        <a class="link-light" href="https://www.instagram.com/cocteles_mix" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
   </footer>
 
-  <!-- Bootstrap JS -->
+    <!-- Bootstrap JS -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

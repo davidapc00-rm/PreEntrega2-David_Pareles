@@ -1,0 +1,5 @@
+/* Usa módulos con namespace (no @import) */
+@use 'variables';
+@use 'mixins';
+@use 'base';
+@use 'components';
