@@ -2,8 +2,12 @@
   "name": "entrega2-david_pareles",
   "version": "1.0.0",
   "scripts": {
+<<<<<<< HEAD
     "sass": "sass --watch scss:css",
     "build:css": "sass --no-source-map --style=compressed scss:css"
+=======
+    "sass": "sass --watch scss:css"
+>>>>>>> work/restore-2025-10-20
   },
   "devDependencies": {
     "sass": "^1.80.0"
